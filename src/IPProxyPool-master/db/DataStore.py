@@ -10,8 +10,8 @@ def get_sqlhelper(proxy_type):
             from db.MongoHelper import MongoHelper as SqlHelper
         else:
             #免费和专用则存储在redis
-            # from db.RedisHelper import RedisHelper as SqlHelper
-            from db.SqlHelper import SqlHelper as SqlHelper
+            from db.RedisHelper import RedisHelper as SqlHelper
+            #from db.SqlHelper import SqlHelper as SqlHelper
         sqlhelper = SqlHelper()
         #数据库初始化
         sqlhelper.init_db()
